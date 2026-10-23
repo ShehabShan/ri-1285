@@ -30,6 +30,18 @@ water flowing toward the camera, camera passing him, camera rising high, aerial 
 - [ ] The figure stays at frame center and grows steadily, with no zoom jump.
 - [ ] The wide view shows cliffs at the far edges and endless mist upstream.
 
+## Cross-session contract (mandatory)
+Queue status is in `production/state.json`; the header is descriptive, not authorization.
+Read the whole brief, COMMON, CONTINUITY, QUALITY_GATE and MEDIA_CONTRACT, inspect actual
+masters and the approved model/recipe, and run `--task T09`.
+Candidate sample count: **97** at 24 fps; retained final count:
+**96**, range **[0, 96)**.
+Last sample is boundary-only and discarded from THIS clip at assembly.
+Retiming uses endpoint-to-endpoint span, not nominal container duration.
+Store native and conformed attempts, payloads/locks/hashes, full-frame review and timed
+beat evidence. T09 produces candidates only; Q09 independently accepts/rejects.
+Match the approved full-film motion language and visual master; no standalone style reinterpretation.
+
 ## Attempts
 
 | # | Date | Session | Model + version | Settings | Retime | Cost (OLU) | Verdict | Notes |

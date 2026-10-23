@@ -61,3 +61,10 @@ These are the errors most likely to appear, so check for them first.
 4. The face morphs or loses its identity across a clip.
 5. The watercolor style or cream palette bleeds in from the reference.
 6. The eyes are closed or glowing.
+
+## Lock and review evidence
+The asset tables above are descriptive summaries, not proof of acceptance. Candidate
+sheets/style frames must be reviewed through QUALITY_GATE and registered with exact
+hashes and approval citations in `production/assets.json`. No downstream session may
+consume an unapproved, missing, stale or merely named asset. Changing a locked design/
+style invalidates dependent keyframes, clips, seams and edits transitively.

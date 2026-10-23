@@ -52,3 +52,10 @@ Filled in by T05.
 |---|---|---|---|
 | River style frame (empty) | `media/sheets/river_empty.png` | — | not started |
 | River style frame (with him) | `media/sheets/river_with_him.png` | — | not started |
+
+## Lock and review evidence
+The asset tables above are descriptive summaries, not proof of acceptance. Candidate
+sheets/style frames must be reviewed through QUALITY_GATE and registered with exact
+hashes and approval citations in `production/assets.json`. No downstream session may
+consume an unapproved, missing, stale or merely named asset. Changing a locked design/
+style invalidates dependent keyframes, clips, seams and edits transitively.

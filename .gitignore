@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+# Large Release downloads: verify hashes before use; never commit tokens/URLs.
+.env
+media/cuts/*_work/

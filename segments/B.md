@@ -26,9 +26,21 @@ camera orbit, camera cut to side view, zoom, changing distance, fast walk
 
 ## Segment-specific checklist
 
-- [ ] Exactly five steps, or as close as the duration allows, each with a visible water burst.
+- [ ] Exactly five planted heavy steps in B, each with a visible water burst; record their frame times.
 - [ ] The framing stays head to waterline throughout.
 - [ ] The rim light is constant on hair, face edge and shoulders.
+
+## Cross-session contract (mandatory)
+Queue status is in `production/state.json`; the header is descriptive, not authorization.
+Read the whole brief, COMMON, CONTINUITY, QUALITY_GATE and MEDIA_CONTRACT, inspect actual
+masters and the approved model/recipe, and run `--task T10`.
+Candidate sample count: **121** at 24 fps; retained final count:
+**120**, range **[96, 216)**.
+Last sample is boundary-only and discarded from THIS clip at assembly.
+Retiming uses endpoint-to-endpoint span, not nominal container duration.
+Store native and conformed attempts, payloads/locks/hashes, full-frame review and timed
+beat evidence. T10 produces candidates only; Q10 independently accepts/rejects.
+Inspect approved predecessor A tail and review a +/-12-frame seam loop; static endpoint matching is insufficient.
 
 ## Attempts
 

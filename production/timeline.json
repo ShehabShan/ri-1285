@@ -1,0 +1,89 @@
+{
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "total_frames": 720,
+  "sample_rate": 48000,
+  "audio_samples": 1440000,
+  "silence_samples": [
+    1296000,
+    1320000
+  ],
+  "segments": {
+    "A": {
+      "range": [
+        0,
+        96
+      ],
+      "retained_frames": 96,
+      "candidate_frames": 97,
+      "discard_last_endpoint": true,
+      "start_keyframe": "K1",
+      "end_keyframe": "K2"
+    },
+    "B": {
+      "range": [
+        96,
+        216
+      ],
+      "retained_frames": 120,
+      "candidate_frames": 121,
+      "discard_last_endpoint": true,
+      "start_keyframe": "K2",
+      "end_keyframe": "K3"
+    },
+    "C": {
+      "range": [
+        216,
+        312
+      ],
+      "retained_frames": 96,
+      "candidate_frames": 96,
+      "discard_last_endpoint": false,
+      "start_keyframe": "K3",
+      "end_keyframe": "K4"
+    },
+    "D": {
+      "range": [
+        312,
+        432
+      ],
+      "retained_frames": 120,
+      "candidate_frames": 120,
+      "discard_last_endpoint": false,
+      "start_keyframe": "K5",
+      "end_keyframe": "K6"
+    },
+    "E": {
+      "range": [
+        432,
+        552
+      ],
+      "retained_frames": 120,
+      "candidate_frames": 121,
+      "discard_last_endpoint": true,
+      "start_keyframe": "K7",
+      "end_keyframe": "K8"
+    },
+    "F": {
+      "range": [
+        552,
+        708
+      ],
+      "retained_frames": 156,
+      "candidate_frames": 156,
+      "discard_last_endpoint": false,
+      "start_keyframe": "K8",
+      "end_keyframe": "K9"
+    }
+  },
+  "white": [
+    708,
+    720
+  ],
+  "ripple": [
+    312,
+    318
+  ],
+  "hard_cut": 432
+}

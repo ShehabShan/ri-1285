@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "brief_sha256": "4027727c897c20c10a9f2ef1037851ed14a3cfc273a47e82d5d2b56380419432",
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "Scaffold the repo",
+      "depends": [],
+      "requires": [],
+      "outputs": [],
+      "status": "done",
+      "kind": "setup",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "T02",
+      "title": "Model survey (historical; estimates are not locks)",
+      "depends": [
+        "T01"
+      ],
+      "requires": [],
+      "outputs": [],
+      "status": "done",
+      "kind": "setup",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "H01",
+      "title": "Harden fresh-session continuity, QA and assembly",
+      "depends": [
+        "T02"
+      ],
+      "requires": [],
+      "outputs": [],
+      "status": "done",
+      "kind": "maintenance",
+      "session": "https://prompt.ql.app/project/p-ed43b976-7f56/promptql-playground/thread/18829eed-928e-461d-8c78-78356208c32c",
+      "next_action": null
+    },
+    {
+      "id": "T03",
+      "title": "Present-day sheet bake-off and four-view master",
+      "depends": [
+        "H01"
+      ],
+      "requires": [],
+      "outputs": [
+        "present_front",
+        "present_threequarter",
+        "present_profile",
+        "present_full",
+        "image_recipe"
+      ],
+      "status": "ready",
+      "kind": "production",
+      "session": null,
+      "next_action": "Verify pre-submit OLU upper bound, produce present-day four-view candidates plus comparative evidence; Q03 independently reviews and requests exact-hash user approval."
+    },
+    {
+      "id": "Q03",
+      "title": "Independent review: Present-day sheet bake-off and four-view master",
+      "depends": [
+        "T03"
+      ],
+      "requires": [],
+      "outputs": [
+        "present_front",
+        "present_threequarter",
+        "present_profile",
+        "present_full",
+        "image_recipe"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "image_comparison"
+      ],
+      "user_approval_required": true
+    },
+    {
+      "id": "T04",
+      "title": "Younger sheet and flashback look master",
+      "depends": [
+        "Q03"
+      ],
+      "requires": [
+        "present_front",
+        "present_threequarter"
+      ],
+      "outputs": [
+        "young_sheet",
+        "flashback_style"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q04",
+      "title": "Independent review: Younger sheet and flashback look master",
+      "depends": [
+        "T04"
+      ],
+      "requires": [],
+      "outputs": [
+        "young_sheet",
+        "flashback_style"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft"
+      ],
+      "user_approval_required": true
+    },
+    {
+      "id": "T05",
+      "title": "River style and continuity master package",
+      "depends": [
+        "Q03"
+      ],
+      "requires": [
+        "present_front",
+        "present_threequarter",
+        "present_full"
+      ],
+      "outputs": [
+        "river_empty",
+        "river_character",
+        "continuity_master"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q05",
+      "title": "Independent review: River style and continuity master package",
+      "depends": [
+        "T05"
+      ],
+      "requires": [],
+      "outputs": [
+        "river_empty",
+        "river_character",
+        "continuity_master"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft"
+      ],
+      "user_approval_required": true
+    },
+    {
+      "id": "T06",
+      "title": "K1 K2 K3 and planned boundary handoffs",
+      "depends": [
+        "Q05"
+      ],
+      "requires": [
+        "continuity_master",
+        "present_front",
+        "river_character"
+      ],
+      "outputs": [
+        "K1",
+        "K2",
+        "K3",
+        "boundary_K2",
+        "boundary_K3"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q06",
+      "title": "Independent review: K1 K2 K3 and planned boundary handoffs",
+      "depends": [
+        "T06"
+      ],
+      "requires": [],
+      "outputs": [
+        "K1",
+        "K2",
+        "K3",
+        "boundary_K2",
+        "boundary_K3"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "boundary_plan"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T07",
+      "title": "Mandatory K4 and K7 K8 K9 boundary handoffs",
+      "depends": [
+        "Q05"
+      ],
+      "requires": [
+        "continuity_master",
+        "river_character"
+      ],
+      "outputs": [
+        "K4",
+        "K7",
+        "K8",
+        "K9",
+        "boundary_K8"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q07",
+      "title": "Independent review: Mandatory K4 and K7 K8 K9 boundary handoffs",
+      "depends": [
+        "T07"
+      ],
+      "requires": [],
+      "outputs": [
+        "K4",
+        "K7",
+        "K8",
+        "K9",
+        "boundary_K8"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "boundary_plan"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T08",
+      "title": "Flashback K5 K6",
+      "depends": [
+        "Q04"
+      ],
+      "requires": [
+        "young_sheet",
+        "flashback_style"
+      ],
+      "outputs": [
+        "K5",
+        "K6"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q08",
+      "title": "Independent review: Flashback K5 K6",
+      "depends": [
+        "T08"
+      ],
+      "requires": [],
+      "outputs": [
+        "K5",
+        "K6"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "P01",
+      "title": "Technical feasibility: each duration/control, cost bound, clean-clone storage and edit proof",
+      "depends": [
+        "Q06",
+        "Q07",
+        "Q08"
+      ],
+      "requires": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9"
+      ],
+      "outputs": [
+        "preflight"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "QP01",
+      "title": "Independent preflight review",
+      "depends": [
+        "P01"
+      ],
+      "requires": [],
+      "outputs": [
+        "preflight"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "capabilities",
+        "duration_feasibility",
+        "cost_bound",
+        "storage_roundtrip",
+        "assembly_proof"
+      ]
+    },
+    {
+      "id": "T09",
+      "title": "A candidate/model comparison and motion anchor",
+      "depends": [
+        "QP01"
+      ],
+      "requires": [
+        "K1",
+        "K2",
+        "continuity_master",
+        "preflight"
+      ],
+      "outputs": [
+        "A",
+        "motion_anchor",
+        "river_recipe"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q09",
+      "title": "Independent review: A candidate/model comparison and motion anchor",
+      "depends": [
+        "T09"
+      ],
+      "requires": [],
+      "outputs": [
+        "A",
+        "motion_anchor",
+        "river_recipe"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "model_comparison"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T10",
+      "title": "B candidate: five steps and A/B seam",
+      "depends": [
+        "Q09"
+      ],
+      "requires": [
+        "K2",
+        "K3",
+        "A",
+        "motion_anchor",
+        "boundary_K2"
+      ],
+      "outputs": [
+        "B",
+        "seam_AB"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q10",
+      "title": "Independent review: B candidate: five steps and A/B seam",
+      "depends": [
+        "T10"
+      ],
+      "requires": [],
+      "outputs": [
+        "B",
+        "seam_AB"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "seam"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T11",
+      "title": "C candidate: eye/ripple and B/C seam",
+      "depends": [
+        "Q10"
+      ],
+      "requires": [
+        "K3",
+        "K4",
+        "B",
+        "motion_anchor",
+        "boundary_K3"
+      ],
+      "outputs": [
+        "C",
+        "seam_BC"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q11",
+      "title": "Independent review: C candidate: eye/ripple and B/C seam",
+      "depends": [
+        "T11"
+      ],
+      "requires": [],
+      "outputs": [
+        "C",
+        "seam_BC"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "seam",
+        "ripple"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T12",
+      "title": "D flashback candidate and timed entry composite",
+      "depends": [
+        "QP01",
+        "Q09",
+        "Q11"
+      ],
+      "requires": [
+        "K5",
+        "K6",
+        "young_sheet",
+        "flashback_style",
+        "motion_anchor",
+        "C",
+        "K4"
+      ],
+      "outputs": [
+        "D",
+        "D_entry"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q12",
+      "title": "Independent review: D flashback candidate and timed entry composite",
+      "depends": [
+        "T12"
+      ],
+      "requires": [],
+      "outputs": [
+        "D",
+        "D_entry"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "ripple"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T13",
+      "title": "E candidate: plant to face and chest light",
+      "depends": [
+        "Q09",
+        "QP01"
+      ],
+      "requires": [
+        "K7",
+        "K8",
+        "A",
+        "motion_anchor",
+        "boundary_K8"
+      ],
+      "outputs": [
+        "E"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q13",
+      "title": "Independent review: E candidate: plant to face and chest light",
+      "depends": [
+        "T13"
+      ],
+      "requires": [],
+      "outputs": [
+        "E"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T14",
+      "title": "F candidate and E/F seam",
+      "depends": [
+        "Q13"
+      ],
+      "requires": [
+        "K8",
+        "K9",
+        "E",
+        "motion_anchor",
+        "boundary_K8"
+      ],
+      "outputs": [
+        "F",
+        "seam_EF"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q14",
+      "title": "Independent review: F candidate and E/F seam",
+      "depends": [
+        "T14"
+      ],
+      "requires": [],
+      "outputs": [
+        "F",
+        "seam_EF"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "seam"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T15",
+      "title": "Authorized score, SFX, monologue stems and sample-exact mix",
+      "depends": [
+        "Q11",
+        "Q12",
+        "Q14"
+      ],
+      "requires": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "outputs": [
+        "audio_mix",
+        "audio_stems",
+        "audio_rights"
+      ],
+      "status": "needs_user",
+      "kind": "production",
+      "session": null,
+      "next_action": "User authorizes audio source, voice and rights before production. Do not guess."
+    },
+    {
+      "id": "Q15",
+      "title": "Independent review: Authorized score, SFX, monologue stems and sample-exact mix",
+      "depends": [
+        "T15"
+      ],
+      "requires": [],
+      "outputs": [
+        "audio_mix",
+        "audio_stems",
+        "audio_rights"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "provenance",
+        "technical",
+        "audio_cues",
+        "speech",
+        "silence",
+        "rights",
+        "craft"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T16",
+      "title": "Reproducible frame-exact assembly",
+      "depends": [
+        "Q11",
+        "Q12",
+        "Q14",
+        "Q15"
+      ],
+      "requires": [
+        "A",
+        "B",
+        "C",
+        "D_entry",
+        "E",
+        "F",
+        "audio_mix",
+        "seam_AB",
+        "seam_BC",
+        "seam_EF"
+      ],
+      "outputs": [
+        "rough",
+        "assembly_recipe"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q16",
+      "title": "Independent review: Reproducible frame-exact assembly",
+      "depends": [
+        "T16"
+      ],
+      "requires": [],
+      "outputs": [
+        "rough",
+        "assembly_recipe"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "seam",
+        "audio_cues",
+        "silence",
+        "one_hand"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T17",
+      "title": "Conservative consistency finishing; no required V2V",
+      "depends": [
+        "Q16"
+      ],
+      "requires": [
+        "rough",
+        "assembly_recipe",
+        "continuity_master"
+      ],
+      "outputs": [
+        "finished",
+        "finish_recipe"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q17",
+      "title": "Independent review: Conservative consistency finishing; no required V2V",
+      "depends": [
+        "T17"
+      ],
+      "requires": [],
+      "outputs": [
+        "finished",
+        "finish_recipe"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "seam",
+        "audio_cues",
+        "silence",
+        "one_hand"
+      ],
+      "user_approval_required": false
+    },
+    {
+      "id": "T18",
+      "title": "Final encode, release QA and delivery approval",
+      "depends": [
+        "Q17"
+      ],
+      "requires": [
+        "finished",
+        "finish_recipe"
+      ],
+      "outputs": [
+        "final",
+        "final_pcm"
+      ],
+      "status": "blocked",
+      "kind": "production",
+      "session": null,
+      "next_action": null
+    },
+    {
+      "id": "Q18",
+      "title": "Independent review: Final encode, release QA and delivery approval",
+      "depends": [
+        "T18"
+      ],
+      "requires": [],
+      "outputs": [
+        "final",
+        "final_pcm"
+      ],
+      "status": "blocked",
+      "kind": "review",
+      "session": null,
+      "next_action": null,
+      "criteria": [
+        "brief_fixed",
+        "provenance",
+        "technical",
+        "master_match",
+        "craft",
+        "full_frame_review",
+        "beats",
+        "seam",
+        "audio_cues",
+        "silence",
+        "one_hand",
+        "release"
+      ],
+      "user_approval_required": true
+    }
+  ],
+  "reference_sha256": "e026d52fd91ffa1a52afe06d01e5ee03461b0bdfda42623347b45bff6c0833c8"
+}

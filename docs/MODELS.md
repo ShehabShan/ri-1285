@@ -24,7 +24,7 @@ All estimates are for 5 s, sound off.
 | `pixverse/v6/image-to-video` | `image_url` / `end_image_url` | 1–15 s, fractional | ≤1080p | 6.12 cr = $0.38 | Has `negative_prompt` and `seed`. Fractional duration allows exact lengths. |
 | `bytedance/seedance-2.5/image-to-video` | `image_url` / `end_image_url` | 4–30 s | ≤1080p | description only, ≈ $1.14/s at 1080p | **Probably not submittable** (see billing facts). |
 
-**Recommendation.** Use the T09 bake-off on segment A with the same K1/K2 keyframes. Run **Kling 3.0 4K** (top resolution) first, then **MiniMax H3 2K** and **Kling O3 pro**. Pick the model by the acceptance checklist plus visual quality, then lock it for every river segment. At these prices one clip costs about $0.4–2.1. The OLU equivalent is still unmeasured.
+**Recommendation.** Use the T09 bake-off on segment A with the same K1/K2 keyframes. Run **Kling 3.0 4K** (top resolution) first, then **Kling O3 pro**; MiniMax H3 is excluded for 4s A under the current ±15% retime rule unless a qualified shorter native duration becomes available. Pick the model by the acceptance checklist plus visual quality, then lock it for every river segment. At these prices one clip costs about $0.4–2.1. The OLU equivalent is still unmeasured.
 
 ## Images: character sheets and keyframes (need reference images)
 
@@ -34,7 +34,7 @@ All estimates are for 5 s, sound off.
 | `xai/grok-imagine-image-2.0` | `image_urls` 0–10 | `1k`/`2k`, 16:9 available | 1.44 cr = $0.09 | `quality` low/medium. Accepts more references, which helps when conditioning on sheet + style frame together. |
 | `marketing-studio/image/flare` (GPT Image 2.5) | `image_urls` ≤16 | up to 4k, quality up to `max` | description only | **Probably not submittable.** |
 
-**Recommendation.** In T03, generate the front view with both Qwen Image 3 edit and Grok Image 2.0 at 2k, compare, and lock the winner for all sheets and keyframes.
+**Recommendation.** In T03, generate the front view with both Qwen Image 3 edit and Grok Image 2.0 at 2k, compare, then hand off to Q03 for independent review and user approval before locking the winner.
 
 ## Video-to-video: consistency pass (T17)
 
@@ -44,7 +44,7 @@ All estimates are for 5 s, sound off.
 | `kling-video/o3/video-edit` | `video_urls` [1] (3–15.5 s, ≤200 MB) + `image_urls` ≤4, mode std/pro/4k | estimate returned **HTTP 500** | Unverified. Input is capped at 15.5 s, so the pass would run per take (Take 1 = 13 s, Take 2 = 12 s), which fits. |
 | `higgsfield/genjutsu/restyle/v1.0` | `video_url` (4–30 s) + `preset_id` (required; list via `GET /models/higgsfield/genjutsu/restyle/v1.0/presets`) + `image_urls` ≤5 | not estimated | Restyles to fixed presets only, which is a risk to the locked look. |
 
-Re-check these in T17. Per-take passes with Kling O3 video-edit are the expected route if its estimate works by then.
+These are unverified historical candidates, not a required route. T17 defaults to conservative deterministic finishing/review, with any generative experiment requiring explicit user approval and full regression QA.
 
 ## Audio
 
@@ -66,16 +66,29 @@ query($t: uuid!, $since: timestamptz!) {
 }
 ```
 
-## Locked choices
+## Locked choices (summary only; registry is authoritative)
 
 | Stage | Model | Locked by | Settings |
 |---|---|---|---|
-| Sheets and keyframes | — | T03 | — |
-| River segments | — | T09 | — |
-| Flashback (D) | — | T12 | — |
-| Consistency pass | — | T17 | — |
+| Sheets and keyframes | — | Q03 | — |
+| River segments | — | Q09 | — |
+| Flashback (D) | — | Q12 | — |
+| Consistency finishing | — | Q17 | — |
 
 ## Measured OLU per call
 
 | Model + settings | Est. USD | OLU charged | Session |
 |---|---|---|---|
+
+## Hardening: selection is not permission
+All catalog/price observations above are dated survey results, not live capability proof.
+P01 must verify actual native durations, endpoint controls and total OLU upper bounds.
+5s-minimum MiniMax/Omni cannot supply 4s A/C within the speed limit. Compare actual
+endpoint sample spans, including A/B/E boundary samples and F\'s 156 displayed samples.
+Q03 and Q09 freeze image/river recipes in `production/assets.json` ONLY after review;
+this empty summary table is not an accepted lock. Include endpoint/version (or unpinned
+service evidence), all supported settings, prompt expansion off, explicit sound-off,
+no multi-shot, seeds and ordered role references. Unsupported controls require a
+recorded mitigation, not invented request fields. Requalify silently revised services.
+The first controlled paid attempt requires a reliable OLU bound or explicit user decision
+before submitting; USD pricing alone cannot authorize unknown spend.

@@ -6,7 +6,7 @@
 | Part | Take 1, unbroken river take |
 | Timeline | 0:09.000–0:13.000 (96 frames at 24 fps) |
 | Start keyframe | K3 |
-| End keyframe | K4 (or the ECU eye frame at 0:12, with the ripple built in post; see PIPELINE) |
+| End keyframe | K4 (mandatory; declared ripple_generated or eye_for_post; post route must supply reviewed moving C composite) |
 | Before | B (invisible join) |
 | After | D (ripple dissolve at 0:13, done at assembly) |
 | Model | follow the river lock in `docs/MODELS.md` |
@@ -32,6 +32,19 @@ glowing eye, iris color change, eye closing, blinking at the end, sudden zoom, c
 - [ ] The extreme close-up is of the **left** eye and cheekbone.
 - [ ] The eye never glows or changes color.
 - [ ] If the ripple is generated: it starts in the reflection and fills the frame.
+
+## Cross-session contract (mandatory)
+Queue status is in `production/state.json`; the header is descriptive, not authorization.
+Read the whole brief, COMMON, CONTINUITY, QUALITY_GATE and MEDIA_CONTRACT, inspect actual
+masters and the approved model/recipe, and run `--task T11`.
+Candidate sample count: **96** at 24 fps; retained final count:
+**96**, range **[216, 312)**.
+Both endpoint samples are displayed; no endpoint may be trimmed.
+Retiming uses endpoint-to-endpoint span, not nominal container duration.
+Store native and conformed attempts, payloads/locks/hashes, full-frame review and timed
+beat evidence. T11 produces candidates only; Q11 independently accepts/rejects.
+Inspect approved predecessor B tail and review a +/-12-frame seam loop; static endpoint matching is insufficient.
+If using eye_for_post, composite the tracked reflection ripple onto moving C during T11; no frozen-frame shortcut and no unresolved ripple promise at acceptance.
 
 ## Attempts
 

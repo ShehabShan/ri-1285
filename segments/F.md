@@ -35,6 +35,19 @@ external beam, light from the sky, sunburst behind him, glowing eyes, transforma
 - [ ] The river keeps raging; it does not calm.
 - [ ] The pull-back is smooth and rising, ending on a wide shot.
 
+## Cross-session contract (mandatory)
+Queue status is in `production/state.json`; the header is descriptive, not authorization.
+Read the whole brief, COMMON, CONTINUITY, QUALITY_GATE and MEDIA_CONTRACT, inspect actual
+masters and the approved model/recipe, and run `--task T14`.
+Candidate sample count: **156** at 24 fps; retained final count:
+**156**, range **[552, 708)**.
+Both endpoint samples are displayed; no endpoint may be trimmed.
+Retiming uses endpoint-to-endpoint span, not nominal container duration.
+Store native and conformed attempts, payloads/locks/hashes, full-frame review and timed
+beat evidence. T14 produces candidates only; Q14 independently accepts/rejects.
+Inspect approved predecessor E tail and review a +/-12-frame seam loop; static endpoint matching is insufficient.
+Hold evolving three-quarter medium framing until600 (25s), then rising pull-back. K9 is global707; final pure-white samples708–719 belong to assembly, not extra running time.
+
 ## Attempts
 
 | # | Date | Session | Model + version | Settings | Retime | Cost (OLU) | Verdict | Notes |

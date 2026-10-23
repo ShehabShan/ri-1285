@@ -34,6 +34,19 @@ visible boot, visible foot, light outside his body, glowing eyes, glowing object
 - [ ] The light starts faint, inside the chest only, and grows gently.
 - [ ] The river is at full force throughout.
 
+## Cross-session contract (mandatory)
+Queue status is in `production/state.json`; the header is descriptive, not authorization.
+Read the whole brief, COMMON, CONTINUITY, QUALITY_GATE and MEDIA_CONTRACT, inspect actual
+masters and the approved model/recipe, and run `--task T13`.
+Candidate sample count: **121** at 24 fps; retained final count:
+**120**, range **[432, 552)**.
+Last sample is boundary-only and discarded from THIS clip at assembly.
+Retiming uses endpoint-to-endpoint span, not nominal container duration.
+Store native and conformed attempts, payloads/locks/hashes, full-frame review and timed
+beat evidence. T13 produces candidates only; Q13 independently accepts/rejects.
+Match the approved full-film motion language and visual master; no standalone style reinterpretation.
+Face reached by global480 (20s); white chest light only thereafter; K8 remains faint and continues in F. The first plant is at global432.
+
 ## Attempts
 
 | # | Date | Session | Model + version | Settings | Retime | Cost (OLU) | Verdict | Notes |

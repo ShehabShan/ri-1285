@@ -2,6 +2,16 @@
 
 Newest entry first. See the format in `docs/SESSION_PROTOCOL.md`.
 
+## Session 3 — 2026-10-23 — H01
+- Bot: https://prompt.ql.app/project/p-ed43b976-7f56/promptql-playground/thread/18829eed-928e-461d-8c78-78356208c32c
+- Starting commit: 68e9cee8a79dbbd488319a4ecbd9a0cc330279de.
+- Did: User-requested fresh-session audit and hardening, not a generation task. Added approved visual/motion master contracts, per-boundary motion handoffs, independent T/Q review gates and craft floor, hashed state/lineage/provenance, charged-job recovery and exact media/audio/assembly accounting. See docs/AUDIT.md for the failure-route closure matrix. Added stdlib validator, mechanical assembler, generated queue, schemas, an installable CI template and 25 tests. Automatic CI is not enabled: the integration refused workflow-file writes; see docs/ci/README.md.
+- Inputs/outputs: Existing brief/bibles/specs/reference audited; all changes are documentation, state scaffolding and tooling. No media or design locks created, no assets marked accepted.
+- Verification: 25 local tests pass, including real synthetic FFmpeg 720-frame assembly and PCM silence/endpoint ownership; scaffold validator and git diff --check pass; release gate fails as expected with missing final media/approval. Brief SHA256 unchanged: 4027727c897c20c10a9f2ef1037851ed14a3cfc273a47e82d5d2b56380419432.
+- Cost: 5.69 OLU ledger snapshot during this interaction, own work only; zero paid media generation. Snapshot excludes remaining validation/publication and closing messages; not a final settled total.
+- Result: hardening complete; publication is verified separately by remote commit check; native Git requests timed out, so an atomic GitHub API commit is used if authorized. Scaffolding tests certify mechanics/provenance, not artistic quality or an unseen clip.
+- Next: T03 produces candidate present-day views and image bake-off evidence; Q03 independently reviews, obtains user approval, then locks image recipe. Do not submit until total OLU cost bound is reliable. T15 still needs user authorization of audio source/voice/rights. Later actual capability/temporal quality and visual approvals remain real gates.
+
 ## Session 2 — 2026-10-23 — T02
 - Bot: https://prompt.ql.app/project/p-5dbcae94-40af/promptql-playground/thread/eaca8889-2209-4662-b1d1-6be78488a20f (same bot as session 1)
 - Did: Surveyed the Higgsfield catalog (87 models) and extracted parameters for the first/last-frame video, reference-image and video-to-video candidates. Ran cost estimates and wrote `docs/MODELS.md`.

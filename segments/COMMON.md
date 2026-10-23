@@ -2,7 +2,7 @@
 
 ## Prompt blocks
 
-Paste these into every segment prompt. Adapt the wording to the chosen model's prompt style, but do not drop any content.
+Resolve these blocks into every river prompt; D uses STYLE plus its younger/flashback block, not CHARACTER/RIVER. Preserve semantic constraints; store the expanded payload and recipe delta. Use negatives contextually: D must retain crying, tied hair and warm dusk. Never submit literal [STYLE] placeholders.
 
 **STYLE**
 Premium modern Japanese anime feature film, ufotable / MAPPA quality. Hand-drawn 2D characters with clean tapered line art and cel shading with soft gradients. Detailed hand-painted matte backgrounds with deep atmospheric perspective. Richly simulated but stylized anime water: sculpted foam shapes, crisp droplets with painted highlights, layered mist planes, soft bloom. Cinematic lens, smooth stabilized camera, shallow depth of field in close-ups, light film grain. Slow, heavy, deliberate pacing. One continuous shot, no cuts.
@@ -19,7 +19,7 @@ jump cuts, extra cuts, rapid cutting, montage, AMV-style editing, music-video ed
 
 ## Acceptance checklist (all segments)
 
-A clip is accepted only if **every** applicable item passes.
+A clip is accepted only if **every** applicable item passes AND the positive craft floor in `docs/QUALITY_GATE.md` passes in a separate fresh-session review. One-second samples alone cannot justify acceptance. The complete brief, bibles, approved masters, boundary motion contract, technical/evidence gate and segment beats are mandatory inputs.
 
 **Continuity**
 - [ ] No cuts, jump cuts, flash frames or camera resets inside the clip.
@@ -45,3 +45,16 @@ A clip is accepted only if **every** applicable item passes.
 - [ ] Anime: not photoreal, no 3D faces, no watercolor or cream palette from the reference.
 - [ ] Mist never covers his face.
 - [ ] No text, subtitles, logos or watermarks.
+
+## Additional acceptance gates
+- [ ] All frames reviewed, positive craft dimensions each >=4 with evidence.
+- [ ] Exact native + conformed specs/provenance and hash lineage recorded.
+- [ ] Camera/gait/hair/cloth/current/light continue through boundary motion windows.
+- [ ] Named timed beats and actual plant times measured, not merely prompt intent.
+- [ ] Native audio removed; no lip-sync; D intentional appearance changes preserved.
+- [ ] No boiling/smear/plastic skin/CGI gloss/texture crawl/generic float/overbloom concealment.
+- [ ] Separate reviewer evidence package passes; unresolved = candidate/hold.
+- [ ] Upstream assets and locks remain current; downstream invalidation checked.
+
+Technical checks do not grant artistic acceptance. If camera limits hide feet, grounded
+walking must still read in torso/cloth/splash; do not fabricate a visible boot to prove it.
