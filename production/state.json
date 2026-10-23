@@ -40,10 +40,24 @@
       "next_action": null
     },
     {
+      "id": "S01",
+      "title": "Rewrite repo for sequential creation (docs/SEQUENTIAL_DESIGN.md)",
+      "depends": [
+        "H01"
+      ],
+      "requires": [],
+      "outputs": [],
+      "status": "ready",
+      "kind": "maintenance",
+      "session": null,
+      "next_action": "Implement docs/SEQUENTIAL_DESIGN.md: create production/sequence.json; rewrite SESSION_PROTOCOL/PIPELINE/README/AGENTS/MODELS for the clip-by-clip loop (Kling 3.0 4K, sound on, Opus 5.5 picks length within 50 OLU with 10 reserve, last-frame chaining + style still, cuts at 13 s and 18 s); replace K1-K9, fixed A-F timeline and T03-Q18 chain with sequential tasks; update validate.py, assemble.py, tests and render_queue; run tests; commit, push, verify remote, stop. No paid generation."
+    },
+    {
       "id": "T03",
       "title": "Present-day sheet bake-off and four-view master",
       "depends": [
-        "H01"
+        "H01",
+        "S01"
       ],
       "requires": [],
       "outputs": [
@@ -53,10 +67,10 @@
         "present_full",
         "image_recipe"
       ],
-      "status": "ready",
+      "status": "blocked",
       "kind": "production",
       "session": null,
-      "next_action": "Verify pre-submit OLU upper bound, produce present-day four-view candidates plus comparative evidence; Q03 independently reviews and requests exact-hash user approval."
+      "next_action": "Superseded by the sequential design; S01 replaces this task. Do not start."
     },
     {
       "id": "Q03",
@@ -687,7 +701,7 @@
         "audio_stems",
         "audio_rights"
       ],
-      "status": "needs_user",
+      "status": "blocked",
       "kind": "production",
       "session": null,
       "next_action": "User authorizes audio source, voice and rights before production. Do not guess."

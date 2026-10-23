@@ -2,6 +2,14 @@
 
 Newest entry first. See the format in `docs/SESSION_PROTOCOL.md`.
 
+## Session 4 — 2026-10-23 — planning for S01 (no production task)
+- Bot: https://prompt.ql.app/project/p-3a501402-0511/promptql-playground/thread/eeec6cca-29b2-48b3-9939-4064732345b0
+- Starting commit: 2d950d9.
+- Did: Verified Kling 3.0 4K on Higgsfield, Opus 5.5 availability, and that Higgsfield has no standalone audio model. User approved sequential clip-by-clip creation and Kling built-in sound. Recorded the approved design in docs/SEQUENTIAL_DESIGN.md and added task S01 to implement it. T03 is blocked behind S01; T15 no longer needs a user audio decision.
+- Not done (stopped early, user's OLU running low): the actual repo rewrite (sequence.json, protocol, timeline, validator, assembler, tests). That is S01.
+- Cost: no paid generation. Price estimate endpoint failed (HTTP 500, then timeout); $2.10/5 s not re-verified.
+- Next: S01 — implement docs/SEQUENTIAL_DESIGN.md exactly; no paid submits in S01.
+
 ## Session 3 — 2026-10-23 — H01
 - Bot: https://prompt.ql.app/project/p-ed43b976-7f56/promptql-playground/thread/18829eed-928e-461d-8c78-78356208c32c
 - Starting commit: 68e9cee8a79dbbd488319a4ecbd9a0cc330279de.

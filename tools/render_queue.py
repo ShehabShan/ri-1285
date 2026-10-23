@@ -21,7 +21,8 @@ def render(root):
         lines.append("| " + " | ".join(row) + " |")
     lines += [
         "", "## Open user decisions",
-        "- Audio: authorize music/SFX/voice source and rights; T15 stays needs_user until then.",
+        "- Audio: DECIDED 2026-10-23 — Kling 3.0 built-in sound (sound: on) per clip; S01 rewrites T15.",
+        "- Sequential creation approved; see docs/SEQUENTIAL_DESIGN.md. Run S01 first.",
         "- Paid generation: reliable OLU upper bounds required before submission, not USD guesses.",
         "- Master packages Q03/Q04/Q05 and final Q18 need explicit user approvals for exact hashes.",
         "- Optional generative finishing needs separate user authorization; default is deterministic.",

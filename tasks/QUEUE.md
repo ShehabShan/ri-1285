@@ -10,7 +10,8 @@ T tasks make candidates; Q tasks independently review. Missing evidence = hold.
 | T01 | Scaffold the repo | — | — | — | done |
 | T02 | Model survey (historical; estimates are not locks) | T01 | — | — | done |
 | H01 | Harden fresh-session continuity, QA and assembly | T02 | — | — | done |
-| T03 | Present-day sheet bake-off and four-view master | H01 | — | present_front, present_threequarter, present_profile, present_full, image_recipe | ready |
+| S01 | Rewrite repo for sequential creation (docs/SEQUENTIAL_DESIGN.md) | H01 | — | — | ready |
+| T03 | Present-day sheet bake-off and four-view master | H01, S01 | — | present_front, present_threequarter, present_profile, present_full, image_recipe | blocked |
 | Q03 | Independent review: Present-day sheet bake-off and four-view master | T03 | — | present_front, present_threequarter, present_profile, present_full, image_recipe | blocked |
 | T04 | Younger sheet and flashback look master | Q03 | present_front, present_threequarter | young_sheet, flashback_style | blocked |
 | Q04 | Independent review: Younger sheet and flashback look master | T04 | — | young_sheet, flashback_style | blocked |
@@ -36,7 +37,7 @@ T tasks make candidates; Q tasks independently review. Missing evidence = hold.
 | Q13 | Independent review: E candidate: plant to face and chest light | T13 | — | E | blocked |
 | T14 | F candidate and E/F seam | Q13 | K8, K9, E, motion_anchor, boundary_K8 | F, seam_EF | blocked |
 | Q14 | Independent review: F candidate and E/F seam | T14 | — | F, seam_EF | blocked |
-| T15 | Authorized score, SFX, monologue stems and sample-exact mix | Q11, Q12, Q14 | A, B, C, D, E, F | audio_mix, audio_stems, audio_rights | needs_user |
+| T15 | Authorized score, SFX, monologue stems and sample-exact mix | Q11, Q12, Q14 | A, B, C, D, E, F | audio_mix, audio_stems, audio_rights | blocked |
 | Q15 | Independent review: Authorized score, SFX, monologue stems and sample-exact mix | T15 | — | audio_mix, audio_stems, audio_rights | blocked |
 | T16 | Reproducible frame-exact assembly | Q11, Q12, Q14, Q15 | A, B, C, D_entry, E, F, audio_mix, seam_AB, seam_BC, seam_EF | rough, assembly_recipe | blocked |
 | Q16 | Independent review: Reproducible frame-exact assembly | T16 | — | rough, assembly_recipe | blocked |
@@ -46,12 +47,14 @@ T tasks make candidates; Q tasks independently review. Missing evidence = hold.
 | Q18 | Independent review: Final encode, release QA and delivery approval | T18 | — | final, final_pcm | blocked |
 
 ## Open user decisions
-- Audio: authorize music/SFX/voice source and rights; T15 stays needs_user until then.
+- Audio: DECIDED 2026-10-23 — Kling 3.0 built-in sound (sound: on) per clip; S01 rewrites T15.
+- Sequential creation approved; see docs/SEQUENTIAL_DESIGN.md. Run S01 first.
 - Paid generation: reliable OLU upper bounds required before submission, not USD guesses.
 - Master packages Q03/Q04/Q05 and final Q18 need explicit user approvals for exact hashes.
 - Optional generative finishing needs separate user authorization; default is deterministic.
 
 ## Handoff
 
-- **T03**: Verify pre-submit OLU upper bound, produce present-day four-view candidates plus comparative evidence; Q03 independently reviews and requests exact-hash user approval.
+- **S01**: Implement docs/SEQUENTIAL_DESIGN.md: create production/sequence.json; rewrite SESSION_PROTOCOL/PIPELINE/README/AGENTS/MODELS for the clip-by-clip loop (Kling 3.0 4K, sound on, Opus 5.5 picks length within 50 OLU with 10 reserve, last-frame chaining + style still, cuts at 13 s and 18 s); replace K1-K9, fixed A-F timeline and T03-Q18 chain with sequential tasks; update validate.py, assemble.py, tests and render_queue; run tests; commit, push, verify remote, stop. No paid generation.
+- **T03**: Superseded by the sequential design; S01 replaces this task. Do not start.
 - **T15**: User authorizes audio source, voice and rights before production. Do not guess.
