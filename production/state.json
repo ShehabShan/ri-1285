@@ -50,7 +50,7 @@
       "status": "ready",
       "kind": "maintenance",
       "session": null,
-      "next_action": "Rewrite the repo to implement docs/DECISIONS.md D1-D8 exactly (it supersedes SEQUENTIAL_DESIGN where they conflict): production/sequence.json with the D2 clip/still plan and frame map; replace K1-K9, fixed A-F timeline and T03-Q18 with tasks V01-V08; rewrite SESSION_PROTOCOL, PIPELINE, MEDIA_CONTRACT, MODELS, README, AGENTS; update validate.py, assemble.py (conform, drop chained first frame, ripple handles, white hold, ambience + added audio), render_queue.py and tests. Run validator and tests, commit, push, verify remote, stop. No paid generation."
+      "next_action": "Rewrite the repo to implement docs/DECISIONS.md D1-D9 exactly (it supersedes SEQUENTIAL_DESIGN where they conflict). production/sequence.json and docs/CONTINUITY_LOG.md already exist as skeletons: keep their schema. Replace K1-K9, fixed A-F timeline and T03-Q18 with tasks V01-V08; rewrite SESSION_PROTOCOL, PIPELINE, MEDIA_CONTRACT, MODELS, README; add a tool (tools/handoff.py) that verifies sequence.json hashes, builds commit-pinned raw URLs, extracts trim frames and contact sheets, and splits/joins files over 95 MB; update validate.py, assemble.py (conform, trim by frame map, ripple handles, white hold, ambience + added audio), render_queue.py and tests; verify Kokoro installs in the VM. Run validator and tests, commit, push, verify remote, stop. No paid generation."
     },
     {
       "id": "T03",

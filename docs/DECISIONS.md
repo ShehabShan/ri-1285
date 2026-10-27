@@ -104,3 +104,54 @@ the D2 frame map. Record source resolution and fps.
 
 If a session's budget cannot fit its clip plus review, it stays `in_progress` and the next
 session continues it.
+
+## D9. Sequential handoff: the repo is the only memory between sessions
+Every session is a new bot. It cannot see the previous bot's VM, files, artifacts or chat.
+Anything the next session needs is committed and pushed to this repo before the session stops.
+If it is not in the repo, it does not exist.
+
+**Session start (every V task):**
+1. Clone, then read `AGENTS.md`, this file, `docs/CONTINUITY_LOG.md` and `production/sequence.json`.
+2. Re-hash every accepted asset in `sequence.json`. Any mismatch → stop and fix before generating.
+3. If `journal` has an entry with a `request_id` but no terminal status, poll it first. Never resubmit it.
+4. Load the last accepted clip, its trim frame and its "end state" notes. The new clip continues from them.
+
+**Storage layout** (plain git commits; GitHub Release uploads are blocked for this
+integration and git-lfs is not used):
+- `media/stills/S1/a1.png` … candidate and accepted stills
+- `media/clips/C1/a1_raw.mp4` raw Kling output; `media/clips/C1/a1.mp4` conformed (D7)
+- `media/frames/C1/trim.png` exact frame at the trim point = start image of the next clip
+- `media/frames/C1/contact.jpg` contact sheet used for review
+- Files over 95 MB are split with `split -b 90M` into `.partNN` files, and the whole-file
+  SHA-256 is recorded. Rejoin with `cat` and verify before use.
+
+**Passing the start image to Kling:** commit and push the PNG first, then use a
+commit-pinned URL `https://raw.githubusercontent.com/ShehabShan/ri-1285/<commit>/<path>`.
+Download it once and check its SHA-256 before the estimate and submit.
+
+**Prompt continuity:** every river clip prompt is built as
+`style_anchor.prompt_block` (verbatim, from S1) + the previous clip's `end_state` + the new
+beat from the brief. The negative prompt, `cfg_scale` and model never change between clips.
+The prompt actually sent is stored verbatim with the attempt.
+
+**What each attempt records in `sequence.json`:** model path, full request body, body
+SHA-256, estimate (credits, USD), request_id, terminal status, OLU charged, output URL,
+raw and conformed paths with SHA-256, source resolution and fps, trim frame index,
+review verdict with reason codes, and reviewer session.
+
+**Continuity notes:** when a clip is accepted, its `end_state` is written to both
+`sequence.json` and `docs/CONTINUITY_LOG.md`: light direction and colour, water level and
+flow direction, robe and hair (wet, motion), his pose and which foot is planted, eye state,
+camera position, direction and speed, palette, plus a "next clip must" line.
+
+**Submit journal:** before a paid submit, add a `pending` journal entry with the body
+SHA-256 and push it. Right after the submit returns, record the `request_id` and push again,
+so a crashed session's successor can poll instead of paying twice. Higgsfield output URLs
+expire after about 7 days, so a clip is downloaded and committed in the session that made it.
+
+**Stale rule:** if a clip is rejected after later clips in the same take were made from it,
+those later clips are marked `stale` and redone in order.
+
+**Push:** use `git -c http.postBuffer=524288000 push` (the default buffer fails on media).
+**Session end:** commit, push, confirm local HEAD equals `origin/main`, and confirm every
+new media file's commit-pinned raw URL returns 200 with the right SHA-256.

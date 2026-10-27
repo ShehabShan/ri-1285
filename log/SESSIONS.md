@@ -2,6 +2,13 @@
 
 Newest entry first. See the format in `docs/SESSION_PROTOCOL.md`.
 
+## Session 7 — 2026-10-27 — sequential handoff (no production task)
+- Bot: https://prompt.ql.app/project/p-fc80a416-c97c/promptql-playground/thread/a5cd703a-1957-4fa8-80d2-33e683f8fd6a
+- Did: User asked for strictly sequential creation where each session knows what the previous one made. Added DECISIONS D9, production/sequence.json skeleton, docs/CONTINUITY_LOG.md and media/{stills,clips,frames}.
+- Tests: GitHub Release asset upload is blocked (uploads.github.com not on the integration allow-list; test release and tag deleted). A 12 MB binary committed on a throwaway branch pushed in ~10 s with a larger http.postBuffer, was served by raw.githubusercontent.com (branch and commit-pinned) with matching SHA-256 within 10 s, and came back intact in a fresh clone. Throwaway branch deleted.
+- Cost: no paid generation.
+- Next: S01 — implement D1-D9; no paid submits.
+
 ## Session 6 — 2026-10-27 — decisions locked (no production task)
 - Bot: https://prompt.ql.app/project/p-fc80a416-c97c/promptql-playground/thread/a5cd703a-1957-4fa8-80d2-33e683f8fd6a
 - Did: User delegated all open decisions. Wrote docs/DECISIONS.md (D1-D8): Kling 3.0 4K with whole-film Pro fallback, 6-clip shot plan with exact frame map, still bake-off, Kokoro TTS + synthesized/CC0 audio, spending authorization ($60 estimate ceiling), delegated fresh-session review, conform rules, session order. Updated S01/T03/T15 handoffs, queue and AGENTS.

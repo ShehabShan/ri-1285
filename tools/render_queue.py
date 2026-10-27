@@ -23,6 +23,7 @@ def render(root):
         "", "## User decisions",
         "- All open decisions were delegated to the bot and are LOCKED in docs/DECISIONS.md (2026-10-27): model, shot plan, stills, audio, spending, review, conform, session order.",
         "- Paid generation is authorized within 50 OLU/session (10 reserve), 3 attempts per item and a $60 Higgsfield-estimate film ceiling.",
+        "- Sequential handoff (D9): each session continues from production/sequence.json and docs/CONTINUITY_LOG.md; everything is committed before stopping.",
         "- Run S01 first (no paid generation).",
         "", "## Handoff", "",
     ]

@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "fps": 24,
+  "frames_total": 720,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "raw_url_base": "https://raw.githubusercontent.com/ShehabShan/ri-1285",
+  "model": "kling-video/v3.0/4k/image-to-video",
+  "fixed_params": {
+    "cfg_scale": 0.5,
+    "sound": "on",
+    "negative_prompt_source": "brief/BRIEF.md NEGATIVE PROMPT"
+  },
+  "olu_per_usd": null,
+  "spend": {
+    "estimate_usd_total": 0,
+    "olu_total": 0,
+    "ceiling_usd": 60
+  },
+  "style_anchor": {
+    "still": "S1",
+    "prompt_block": null,
+    "image_path": null,
+    "image_sha256": null
+  },
+  "stills": {
+    "S1": {
+      "status": "todo",
+      "purpose": "C1 start + style anchor",
+      "candidates": [],
+      "accepted": null
+    },
+    "S2": {
+      "status": "todo",
+      "purpose": "C4 flashback start",
+      "candidates": [],
+      "accepted": null
+    },
+    "S3": {
+      "status": "todo",
+      "purpose": "C5 waterline start",
+      "candidates": [],
+      "accepted": null
+    }
+  },
+  "frame_map": [
+    {
+      "id": "C1",
+      "film_frames": [
+        0,
+        96
+      ],
+      "generate_s": 5,
+      "start_from": "S1",
+      "handle_frames": 0,
+      "beat": "0:00-0:04 extreme wide, glide toward him"
+    },
+    {
+      "id": "C2",
+      "film_frames": [
+        96,
+        216
+      ],
+      "generate_s": 6,
+      "start_from": "C1",
+      "handle_frames": 0,
+      "beat": "0:04-0:09 backward track, five steps"
+    },
+    {
+      "id": "C3",
+      "film_frames": [
+        216,
+        312
+      ],
+      "generate_s": 5,
+      "start_from": "C2",
+      "handle_frames": 6,
+      "beat": "0:09-0:13 push in to left eye, ripple"
+    },
+    {
+      "id": "C4",
+      "film_frames": [
+        312,
+        432
+      ],
+      "generate_s": 6,
+      "start_from": "S2",
+      "handle_frames": 0,
+      "beat": "0:13-0:18 grave flashback, one arc"
+    },
+    {
+      "id": "C5",
+      "film_frames": [
+        432,
+        600
+      ],
+      "generate_s": 8,
+      "start_from": "S3",
+      "handle_frames": 0,
+      "beat": "0:18-0:25 waterline leg, tilt up, light kindles"
+    },
+    {
+      "id": "C6",
+      "film_frames": [
+        600,
+        708
+      ],
+      "generate_s": 5,
+      "start_from": "C5",
+      "handle_frames": 0,
+      "beat": "0:25-0:29.5 rising pull-back, flare"
+    },
+    {
+      "id": "WHITE",
+      "film_frames": [
+        708,
+        720
+      ],
+      "generate_s": 0,
+      "start_from": null,
+      "handle_frames": 0,
+      "beat": "0:29.5-0:30 pure white hold (assembly)"
+    }
+  ],
+  "clips": {
+    "C1": {
+      "status": "todo",
+      "start_from": "S1",
+      "trim_frame": 96,
+      "handle_frames": 0,
+      "attempts": [],
+      "accepted": null,
+      "trim_png": null,
+      "end_state": null
+    },
+    "C2": {
+      "status": "todo",
+      "start_from": "C1",
+      "trim_frame": 120,
+      "handle_frames": 0,
+      "attempts": [],
+      "accepted": null,
+      "trim_png": null,
+      "end_state": null
+    },
+    "C3": {
+      "status": "todo",
+      "start_from": "C2",
+      "trim_frame": 96,
+      "handle_frames": 6,
+      "attempts": [],
+      "accepted": null,
+      "trim_png": null,
+      "end_state": null
+    },
+    "C4": {
+      "status": "todo",
+      "start_from": "S2",
+      "trim_frame": 120,
+      "handle_frames": 0,
+      "attempts": [],
+      "accepted": null,
+      "trim_png": null,
+      "end_state": null
+    },
+    "C5": {
+      "status": "todo",
+      "start_from": "S3",
+      "trim_frame": 168,
+      "handle_frames": 0,
+      "attempts": [],
+      "accepted": null,
+      "trim_png": null,
+      "end_state": null
+    },
+    "C6": {
+      "status": "todo",
+      "start_from": "C5",
+      "trim_frame": 108,
+      "handle_frames": 0,
+      "attempts": [],
+      "accepted": null,
+      "trim_png": null,
+      "end_state": null
+    }
+  },
+  "journal": []
+}

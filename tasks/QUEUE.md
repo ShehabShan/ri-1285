@@ -49,10 +49,11 @@ T tasks make candidates; Q tasks independently review. Missing evidence = hold.
 ## User decisions
 - All open decisions were delegated to the bot and are LOCKED in docs/DECISIONS.md (2026-10-27): model, shot plan, stills, audio, spending, review, conform, session order.
 - Paid generation is authorized within 50 OLU/session (10 reserve), 3 attempts per item and a $60 Higgsfield-estimate film ceiling.
+- Sequential handoff (D9): each session continues from production/sequence.json and docs/CONTINUITY_LOG.md; everything is committed before stopping.
 - Run S01 first (no paid generation).
 
 ## Handoff
 
-- **S01**: Rewrite the repo to implement docs/DECISIONS.md D1-D8 exactly (it supersedes SEQUENTIAL_DESIGN where they conflict): production/sequence.json with the D2 clip/still plan and frame map; replace K1-K9, fixed A-F timeline and T03-Q18 with tasks V01-V08; rewrite SESSION_PROTOCOL, PIPELINE, MEDIA_CONTRACT, MODELS, README, AGENTS; update validate.py, assemble.py (conform, drop chained first frame, ripple handles, white hold, ambience + added audio), render_queue.py and tests. Run validator and tests, commit, push, verify remote, stop. No paid generation.
+- **S01**: Rewrite the repo to implement docs/DECISIONS.md D1-D9 exactly (it supersedes SEQUENTIAL_DESIGN where they conflict). production/sequence.json and docs/CONTINUITY_LOG.md already exist as skeletons: keep their schema. Replace K1-K9, fixed A-F timeline and T03-Q18 with tasks V01-V08; rewrite SESSION_PROTOCOL, PIPELINE, MEDIA_CONTRACT, MODELS, README; add a tool (tools/handoff.py) that verifies sequence.json hashes, builds commit-pinned raw URLs, extracts trim frames and contact sheets, and splits/joins files over 95 MB; update validate.py, assemble.py (conform, trim by frame map, ripple handles, white hold, ambience + added audio), render_queue.py and tests; verify Kokoro installs in the VM. Run validator and tests, commit, push, verify remote, stop. No paid generation.
 - **T03**: Superseded by docs/DECISIONS.md D3/D8 (V01 still bake-off); S01 replaces this task. Do not start.
 - **T15**: Superseded by docs/DECISIONS.md D4 (Kokoro TTS + CC0/synth cues + Kling ambience); S01 replaces this task.
