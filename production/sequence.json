@@ -400,6 +400,53 @@
     {
       "request_id": "01a17ea3-e68b-70f4-a8b3-58c5fc6a7d41",
       "state": "completed"
+    },
+    {
+      "tag": "S2_qwen_a2",
+      "model": "alibaba/qwen-image-3/edit",
+      "body_sha": "f181b01c2b9d81203ca7000c8f6adedf7ec865ac170a9bf282c823466e5e5f1a",
+      "state": "pending",
+      "t": 1793126380.3028991
+    },
+    {
+      "tag": "S2_qwen_a2",
+      "body_sha": "f181b01c2b9d81203ca7000c8f6adedf7ec865ac170a9bf282c823466e5e5f1a",
+      "state": "rejected",
+      "status": 403,
+      "text": "{\"detail\":\"not_enough_credits\"}"
+    },
+    {
+      "tag": "S2_grok_a2",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "8d38bb8c5cc7fe74bc108c933935abcae87a5f00b25213605cc1fc74aa004808",
+      "state": "pending",
+      "t": 1793126395.211557
+    },
+    {
+      "tag": "S2_grok_a2",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "8d38bb8c5cc7fe74bc108c933935abcae87a5f00b25213605cc1fc74aa004808",
+      "state": "submitted",
+      "request_id": "01a17ea9-c544-722f-b7f2-c02d729b4b02"
+    },
+    {
+      "tag": "S3_qwen_a2",
+      "model": "alibaba/qwen-image-3/edit",
+      "body_sha": "f8f07595bc46fc0e97daa4f9811ef693be4304f7a3ba86ec37c3e379f61257a9",
+      "state": "pending",
+      "t": 1793126426.2390647
+    },
+    {
+      "tag": "S3_qwen_a2",
+      "body_sha": "f8f07595bc46fc0e97daa4f9811ef693be4304f7a3ba86ec37c3e379f61257a9",
+      "state": "rejected",
+      "status": 403,
+      "text": "{\"detail\":\"not_enough_credits\"}"
+    },
+    {
+      "request_id": "01a17ea9-c544-722f-b7f2-c02d729b4b02",
+      "state": "failed",
+      "error": "Your credit balance is too low to complete this request. Please top up your balance and try again."
     }
   ],
   "deviations": [
