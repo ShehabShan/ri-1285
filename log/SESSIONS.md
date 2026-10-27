@@ -2,6 +2,15 @@
 
 Newest entry first. See the format in `docs/SESSION_PROTOCOL.md`.
 
+## Session 8 — 2026-10-27 — out-of-protocol V01 probe, reconciled (no queue task)
+- Bot: https://prompt.ql.app/project/p-c8561213-78eb/promptql-playground/thread/d58827d3-e337-40c5-8af1-f4a5ceee2d35
+- Starting commit: 0b3b9d4.
+- Did: At the user's request, generated start-still candidates ahead of the queue (S01 not yet done, V01 not yet defined). S1: `media/stills/S1/S1_qwen_a1.png` (alibaba/qwen-image-3/edit, 2048x1152) and `S1_grok_a1.png` (xai/grok-imagine-image-2.0, 2816x1584), recorded as candidates in `production/sequence.json`. Neither is reviewed or accepted. S2/S3 attempts a1 and a2 were refused (`not_enough_credits`) or failed ("credit balance is too low"); failures recorded in the sequence.json journal for refund processing. No video clips submitted.
+- Findings: Qwen Image 3 edit rejects `prompt_extend: false` on Higgsfield ("prompt_extend: True was expected"); sent `true`, recorded under `deviations` in sequence.json. Unreviewed bot opinion: Qwen S1 is closer to the brief's mood/river; Grok has cleaner line art but reads as open sea, medium-wide, light eyes. The generation journal lives in sequence.json, not `production/jobs/` — S01 must reconcile this with the protocol.
+- Cost: $0.165 Higgsfield estimate for the two completed stills; OLU per USD still unmeasured; session OLU snapshot not recorded.
+- Blockers: Higgsfield credit balance too low for any further submit.
+- Next: S01 — implement docs/DECISIONS.md D1-D9; keep the existing S1 candidates and journal entries in sequence.json; no paid submits.
+
 ## Session 7 — 2026-10-27 — sequential handoff (no production task)
 - Bot: https://prompt.ql.app/project/p-fc80a416-c97c/promptql-playground/thread/a5cd703a-1957-4fa8-80d2-33e683f8fd6a
 - Did: User asked for strictly sequential creation where each session knows what the previous one made. Added DECISIONS D9, production/sequence.json skeleton, docs/CONTINUITY_LOG.md and media/{stills,clips,frames}.
