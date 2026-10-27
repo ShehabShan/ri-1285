@@ -2,6 +2,14 @@
 
 Newest entry first. See the format in `docs/SESSION_PROTOCOL.md`.
 
+## Session 5 — 2026-10-27 — audio decision record (no production task)
+- Bot: https://prompt.ql.app/project/p-fc80a416-c97c/promptql-playground/thread/a5cd703a-1957-4fa8-80d2-33e683f8fd6a
+- Starting commit: 2f6d7ed.
+- Did: Pre-start review. Found S01 still undone and listed contradictions (audio vs. brief, frame budget, ripple handles, per-clip review, fresh start stills, output conform). User decided audio: Kling sound on for ambience only, brief cues added at assembly. Recorded in SEQUENTIAL_DESIGN, state.json (S01, T15) and the queue.
+- Live checks: Higgsfield catalog 91 models, Kling 3.0 4K i2v present; estimate endpoint still HTTP 500; Opus 5.5 llm_config id here is 0edabd39-3d21-42cb-9cfd-bc2c494eda84 (b90a5408-… is from another project).
+- Cost: no paid generation.
+- Next: S01 — implement the sequential design with the fixes in its handoff; no paid submits.
+
 ## Session 4 — 2026-10-23 — planning for S01 (no production task)
 - Bot: https://prompt.ql.app/project/p-3a501402-0511/promptql-playground/thread/eeec6cca-29b2-48b3-9939-4064732345b0
 - Starting commit: 2d950d9.

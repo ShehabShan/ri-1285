@@ -14,7 +14,7 @@
 
 **Session 1**
 1. Make one anime start still of Fang Yuan in the river from the reference design. The reference image is watercolor, seated and has closed eyes, and the brief forbids copying that look. A cheap image model costs about $0.08.
-2. Generate clip 1 (about 6 s) with Kling 3.0 4K, start frame = that still, `sound: off`.
+2. Generate clip 1 (about 6 s) with Kling 3.0 4K, start frame = that still, `sound: on` (ambience only; see the 2026-10-27 audio decision).
 3. Record the clip in the repo.
 
 **Session N (each fresh session)**
@@ -45,7 +45,13 @@
 
 ## Decisions recorded 2026-10-23 (user, in bot eeec6cca-29b2-48b3-9939-4064732345b0)
 - Sequential creation: **approved**.
-- Audio: **Kling 3.0 built-in sound (`sound: on`) per clip**, no separate audio track.
+- Audio: **Kling 3.0 built-in sound (`sound: on`) per clip**, no separate audio track. Superseded on 2026-10-27; see below.
+
+## Decision recorded 2026-10-27 (user, in bot a5cd703a-1957-4fa8-80d2-33e683f8fd6a)
+- Audio: Kling 3.0 built-in sound (`sound: on`) is kept per clip **for water, wind and footstep ambience only**.
+- Added at assembly, at brief-exact times: the off-screen monologue "I had once screamed, gradually, I lost my voice." (0:12–0:17, never lip-synced), the drum hit on each footstep and at 0:03 and 0:18, the underwater muffle at 0:10–0:12, the erhu note, the score swells, total silence at 0:27.0–0:27.5 and the temple bell into the white at 0:27.5–0:30.
+- A clip whose native sound contains speech, singing or anything implying lip movement is rejected.
+- Still open: the source and rights for the monologue voice and the added score/cues (Higgsfield has no TTS or music model).
 
 ## Remaining work — task S01 (not done; stopped early because the user's OLU ran low)
 - [ ] Create `production/sequence.json` (clips list: index, part take1/flashback/take2, start_s, duration_s, prompt, start-frame source, style-still hash, job id, output hash, last-frame hash, OLU charged, review pointer; plus `measured_olu_per_usd`).

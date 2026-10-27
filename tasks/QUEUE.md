@@ -47,7 +47,7 @@ T tasks make candidates; Q tasks independently review. Missing evidence = hold.
 | Q18 | Independent review: Final encode, release QA and delivery approval | T18 | — | final, final_pcm | blocked |
 
 ## Open user decisions
-- Audio: DECIDED 2026-10-23 — Kling 3.0 built-in sound (sound: on) per clip; S01 rewrites T15.
+- Audio: DECIDED 2026-10-27 — Kling sound on per clip for ambience only; monologue, step drums, muffle, silence and bell added at assembly. Voice/score source and rights still open.
 - Sequential creation approved; see docs/SEQUENTIAL_DESIGN.md. Run S01 first.
 - Paid generation: reliable OLU upper bounds required before submission, not USD guesses.
 - Master packages Q03/Q04/Q05 and final Q18 need explicit user approvals for exact hashes.
@@ -55,6 +55,6 @@ T tasks make candidates; Q tasks independently review. Missing evidence = hold.
 
 ## Handoff
 
-- **S01**: Implement docs/SEQUENTIAL_DESIGN.md: create production/sequence.json; rewrite SESSION_PROTOCOL/PIPELINE/README/AGENTS/MODELS for the clip-by-clip loop (Kling 3.0 4K, sound on, Opus 5.5 picks length within 50 OLU with 10 reserve, last-frame chaining + style still, cuts at 13 s and 18 s); replace K1-K9, fixed A-F timeline and T03-Q18 chain with sequential tasks; update validate.py, assemble.py, tests and render_queue; run tests; commit, push, verify remote, stop. No paid generation.
+- **S01**: Implement docs/SEQUENTIAL_DESIGN.md including the 2026-10-27 audio decision (Kling sound on = ambience only; monologue, step drums, muffle, silence and bell added at assembly) and docs/ri1285 pre-start fixes: per-part frame budgets (Take 1 = 312, flashback = 120, Take 2 = 288 incl. white hold) with generate-long-and-trim on the last clip of each part; ripple-dissolve handle frames at 0:13; per-clip review/accept before chaining, rejection makes later clips stale; user-approved fresh start stills for the flashback and Take 2; conform Kling output to 1920x1080 24 fps; Opus 5.5 llm_config id in this project is 0edabd39-3d21-42cb-9cfd-bc2c494eda84. Update SESSION_PROTOCOL/PIPELINE/MEDIA_CONTRACT/MODELS/README/AGENTS, state tasks, validate.py, assemble.py (mix clip ambience with added cues), render_queue and tests; commit, push, verify remote, stop. No paid generation.
 - **T03**: Superseded by the sequential design; S01 replaces this task. Do not start.
-- **T15**: User authorizes audio source, voice and rights before production. Do not guess.
+- **T15**: Audio route decided 2026-10-27: Kling ambience per clip plus assembly-added monologue and cues. S01 rewrites this task. Voice and score source/rights still need user authorization.
