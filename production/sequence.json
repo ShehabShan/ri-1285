@@ -15,7 +15,7 @@
   },
   "olu_per_usd": null,
   "spend": {
-    "estimate_usd_total": 0,
+    "estimate_usd_total": 0.165,
     "olu_total": 0,
     "ceiling_usd": 60
   },
@@ -27,21 +27,133 @@
   },
   "stills": {
     "S1": {
-      "status": "todo",
+      "status": "candidates_ready",
       "purpose": "C1 start + style anchor",
-      "candidates": [],
+      "candidates": [
+        {
+          "tag": "S1_qwen_a1",
+          "model": "alibaba/qwen-image-3/edit",
+          "request_id": "01a17ea3-abf0-74d4-b1d0-75f09105cb91",
+          "status": "completed",
+          "estimate": {
+            "type": "estimate",
+            "credits": "1.200",
+            "usd": "0.075",
+            "discount": null
+          },
+          "body_sha256": "dbe5e2909576077980a75fd409c7a439714d9f5de89a3808331b1768162b2628",
+          "request_body": {
+            "prompt": "16:9 cinematic anime film frame, the opening shot of the film. Extreme wide shot, lens just above the water surface, slight low angle. Fang Yuan is a small lone figure at the exact center of the frame, walking toward the camera, upstream, through a raging river. The current flows away from the camera and past him; waves break against his knees, spray bursts upward, low mist drifts across the foreground water. He is knee-deep, his boots hidden in opaque water. Hair and the trailing outer robe stream behind him.\n\nPremium modern Japanese anime feature film, ufotable / MAPPA quality. Hand-drawn 2D characters with clean tapered line art and cel shading with soft gradients. Detailed hand-painted matte backgrounds with deep atmospheric perspective. Richly simulated but stylized anime water: sculpted foam shapes, crisp droplets with painted highlights, layered mist planes, soft bloom. Cinematic lens, smooth stabilized camera, shallow depth of field in close-ups, light film grain. Slow, heavy, deliberate pacing. One continuous shot, no cuts.\n\nFang Yuan: tall slender young man, pale cool-toned skin, long narrow face, sharp jaw, straight nose, thin closed lips, narrow dark eyes open under straight brows. Very long, straight, jet-black, center-parted loose hair, soaked and streaming behind him. Loose pure-white cross-collar inner robe with wide sleeves, open at the collar, covering his torso and shoulders. Dark charcoal-black outer robe with a faint deep-teal tint and mottled texture, worn open and slipped down below both shoulders, hanging at his upper arms, its long fabric trailing behind him in the current. Dark trousers. Neutral, emotionless face, gaze fixed forward, mouth closed. Steady, heavy walk, about one step per second, slight forward lean into the current.\n\nA vast mythic river of deep ink-blue to black-teal opaque water, with white-crested rapids, standing waves, sheets of spray and low surface mist. The water is knee-deep on him. He walks upstream: the current strikes the front of his legs and flows past him toward his back. The river fades into endless mist upstream; dark jagged cliffs stand at the far left and right. Heavy slate-grey storm overcast, cold diffused silver light, no sun. Faint pale-gold motes drift downstream in the spray. Cold, desaturated palette of blue-black, slate grey, steel teal and bone white. Cool-white rim light on his hair, face edge and shoulders.\n\nUse the reference image ONLY for Fang Yuan's character design (face, hair, skin, the cut, material and colour of both robes). Do NOT copy its watercolor style, seated pose, closed eyes, chair, branch, background or warm cream palette. Render as a premium anime film frame, not watercolor. Eyes open. Standing. The white inner robe covers his torso and shoulders; the charcoal outer robe has slipped below both shoulders and hangs at his upper arms. No text, no watermark.",
+            "image_urls": [
+              "https://raw.githubusercontent.com/ShehabShan/ri-1285/0b3b9d4f2b31f7e057752cbcc2984c114554de71/media/refs/fang-yuan-reference.webp"
+            ],
+            "resolution": "2k",
+            "aspect_ratio": "16:9",
+            "prompt_extend": true,
+            "seed": 1285
+          },
+          "path": "media/stills/S1/S1_qwen_a1.png",
+          "sha256": "7d91d10cedcde49cafb813741b2704f721a5f583a5cb7878656974c99a2a4f1a",
+          "dims": "2048,1152",
+          "error": null,
+          "review": null
+        },
+        {
+          "tag": "S1_grok_a1",
+          "model": "xai/grok-imagine-image-2.0",
+          "request_id": "01a17ea3-e68b-70f4-a8b3-58c5fc6a7d41",
+          "status": "completed",
+          "estimate": {
+            "type": "estimate",
+            "credits": "1.440",
+            "usd": "0.090",
+            "discount": null
+          },
+          "body_sha256": "8ebf14d425761c25e04e001c13d47f978cfc0b02e9f0bff68b8886be5e924768",
+          "request_body": {
+            "prompt": "16:9 cinematic anime film frame, the opening shot of the film. Extreme wide shot, lens just above the water surface, slight low angle. Fang Yuan is a small lone figure at the exact center of the frame, walking toward the camera, upstream, through a raging river. The current flows away from the camera and past him; waves break against his knees, spray bursts upward, low mist drifts across the foreground water. He is knee-deep, his boots hidden in opaque water. Hair and the trailing outer robe stream behind him.\n\nPremium modern Japanese anime feature film, ufotable / MAPPA quality. Hand-drawn 2D characters with clean tapered line art and cel shading with soft gradients. Detailed hand-painted matte backgrounds with deep atmospheric perspective. Richly simulated but stylized anime water: sculpted foam shapes, crisp droplets with painted highlights, layered mist planes, soft bloom. Cinematic lens, smooth stabilized camera, shallow depth of field in close-ups, light film grain. Slow, heavy, deliberate pacing. One continuous shot, no cuts.\n\nFang Yuan: tall slender young man, pale cool-toned skin, long narrow face, sharp jaw, straight nose, thin closed lips, narrow dark eyes open under straight brows. Very long, straight, jet-black, center-parted loose hair, soaked and streaming behind him. Loose pure-white cross-collar inner robe with wide sleeves, open at the collar, covering his torso and shoulders. Dark charcoal-black outer robe with a faint deep-teal tint and mottled texture, worn open and slipped down below both shoulders, hanging at his upper arms, its long fabric trailing behind him in the current. Dark trousers. Neutral, emotionless face, gaze fixed forward, mouth closed. Steady, heavy walk, about one step per second, slight forward lean into the current.\n\nA vast mythic river of deep ink-blue to black-teal opaque water, with white-crested rapids, standing waves, sheets of spray and low surface mist. The water is knee-deep on him. He walks upstream: the current strikes the front of his legs and flows past him toward his back. The river fades into endless mist upstream; dark jagged cliffs stand at the far left and right. Heavy slate-grey storm overcast, cold diffused silver light, no sun. Faint pale-gold motes drift downstream in the spray. Cold, desaturated palette of blue-black, slate grey, steel teal and bone white. Cool-white rim light on his hair, face edge and shoulders.\n\nUse the reference image ONLY for Fang Yuan's character design (face, hair, skin, the cut, material and colour of both robes). Do NOT copy its watercolor style, seated pose, closed eyes, chair, branch, background or warm cream palette. Render as a premium anime film frame, not watercolor. Eyes open. Standing. The white inner robe covers his torso and shoulders; the charcoal outer robe has slipped below both shoulders and hangs at his upper arms. No text, no watermark.",
+            "image_urls": [
+              "https://raw.githubusercontent.com/ShehabShan/ri-1285/0b3b9d4f2b31f7e057752cbcc2984c114554de71/media/refs/fang-yuan-reference.webp"
+            ],
+            "resolution": "2k",
+            "aspect_ratio": "16:9",
+            "quality": "medium"
+          },
+          "path": "media/stills/S1/S1_grok_a1.png",
+          "sha256": "0974030f008184cdbeaf8ae582a1daa1b267391f6ba118fdd8d927ef56eedb44",
+          "dims": "2816,1584",
+          "error": null,
+          "review": null
+        }
+      ],
       "accepted": null
     },
     "S2": {
       "status": "todo",
       "purpose": "C4 flashback start",
-      "candidates": [],
+      "candidates": [
+        {
+          "tag": "S2_grok_a1",
+          "model": "xai/grok-imagine-image-2.0",
+          "request_id": "01a17ea4-6af2-7d03-afbf-c281cfc4edb2",
+          "status": "failed",
+          "estimate": {
+            "type": "estimate",
+            "credits": "1.440",
+            "usd": "0.090",
+            "discount": null
+          },
+          "body_sha256": "8d38bb8c5cc7fe74bc108c933935abcae87a5f00b25213605cc1fc74aa004808",
+          "request_body": {
+            "prompt": "16:9 cinematic anime film frame, a flashback memory at dusk. Faded amber-sepia dusk light, soft bloom, heavier film grain, gentle vignette, soft painted background texture. Mountain wilderness, wind through tall golden grass, a fresh mound of earth with a simple wooden grave marker. Fang Yuan's younger self (same face as the reference, younger and softer), long black hair tied back, plain worn grey-brown traveler's clothes, stands before the grave, fists clenched at his sides, crying openly: tears on his cheeks, lips trembling. Camera behind his shoulder, slightly to the side, beginning a slow arc toward a three-quarter profile; the grave marker and his tear-wet cheek both readable. He is the only person.\n\nPremium modern Japanese anime feature film, ufotable / MAPPA quality. Hand-drawn 2D characters with clean tapered line art and cel shading with soft gradients. Detailed hand-painted matte backgrounds with deep atmospheric perspective. Richly simulated but stylized anime water: sculpted foam shapes, crisp droplets with painted highlights, layered mist planes, soft bloom. Cinematic lens, smooth stabilized camera, shallow depth of field in close-ups, light film grain. Slow, heavy, deliberate pacing. One continuous shot, no cuts.\n\nUse the reference image ONLY for his face design. Do NOT copy its watercolor style, robes, seated pose, closed eyes, chair or branch. Eyes open. Premium anime film frame. No text, no watermark.",
+            "image_urls": [
+              "https://raw.githubusercontent.com/ShehabShan/ri-1285/0b3b9d4f2b31f7e057752cbcc2984c114554de71/media/refs/fang-yuan-reference.webp"
+            ],
+            "resolution": "2k",
+            "aspect_ratio": "16:9",
+            "quality": "medium"
+          },
+          "path": null,
+          "sha256": null,
+          "dims": null,
+          "error": "Your credit balance is too low to complete this request. Please top up your balance and try again.",
+          "review": null
+        }
+      ],
       "accepted": null
     },
     "S3": {
       "status": "todo",
       "purpose": "C5 waterline start",
-      "candidates": [],
+      "candidates": [
+        {
+          "tag": "S3_grok_a1",
+          "model": "xai/grok-imagine-image-2.0",
+          "request_id": "01a17ea4-e7c5-7587-b00d-502508c25b0c",
+          "status": "failed",
+          "estimate": {
+            "type": "estimate",
+            "credits": "1.440",
+            "usd": "0.090",
+            "discount": null
+          },
+          "body_sha256": "aca7613cdd0dc280d7b215bd857e9518613a14d22dc15b6cc0b83087214233b2",
+          "request_body": {
+            "prompt": "16:9 cinematic anime film frame. Waterline close-up of Fang Yuan's leading lower leg driving forward against the current, camera just above the water at shin height, frontal. His dark trouser leg and the soaked, heavy hems of the white inner robe and charcoal outer robe; his boot is hidden beneath the opaque ink-blue water. Displaced water bursts around his shin toward the lens, white-crested foam, crisp droplets with painted highlights. The current flows from the foreground away past him. Knee-deep water. Only his lower legs and robe hems are in frame; no face.\n\nPremium modern Japanese anime feature film, ufotable / MAPPA quality. Hand-drawn 2D characters with clean tapered line art and cel shading with soft gradients. Detailed hand-painted matte backgrounds with deep atmospheric perspective. Richly simulated but stylized anime water: sculpted foam shapes, crisp droplets with painted highlights, layered mist planes, soft bloom. Cinematic lens, smooth stabilized camera, shallow depth of field in close-ups, light film grain. Slow, heavy, deliberate pacing. One continuous shot, no cuts.\n\nA vast mythic river of deep ink-blue to black-teal opaque water, with white-crested rapids, standing waves, sheets of spray and low surface mist. The water is knee-deep on him. He walks upstream: the current strikes the front of his legs and flows past him toward his back. The river fades into endless mist upstream; dark jagged cliffs stand at the far left and right. Heavy slate-grey storm overcast, cold diffused silver light, no sun. Faint pale-gold motes drift downstream in the spray. Cold, desaturated palette of blue-black, slate grey, steel teal and bone white. Cool-white rim light on his hair, face edge and shoulders.\n\nUse the reference image ONLY for the robe colours and materials. No watercolor. No visible boots, no visible riverbed. No text, no watermark.",
+            "image_urls": [
+              "https://raw.githubusercontent.com/ShehabShan/ri-1285/0b3b9d4f2b31f7e057752cbcc2984c114554de71/media/refs/fang-yuan-reference.webp"
+            ],
+            "resolution": "2k",
+            "aspect_ratio": "16:9",
+            "quality": "medium"
+          },
+          "path": null,
+          "sha256": null,
+          "dims": null,
+          "error": "Your credit balance is too low to complete this request. Please top up your balance and try again.",
+          "review": null
+        }
+      ],
       "accepted": null
     }
   },
@@ -186,5 +298,111 @@
       "end_state": null
     }
   },
-  "journal": []
+  "journal": [
+    {
+      "tag": "S1_qwen_a1",
+      "model": "alibaba/qwen-image-3/edit",
+      "body_sha": "dbe5e2909576077980a75fd409c7a439714d9f5de89a3808331b1768162b2628",
+      "state": "pending",
+      "t": 1793126009.5159392
+    },
+    {
+      "tag": "S1_qwen_a1",
+      "model": "alibaba/qwen-image-3/edit",
+      "body_sha": "dbe5e2909576077980a75fd409c7a439714d9f5de89a3808331b1768162b2628",
+      "state": "submitted",
+      "request_id": "01a17ea3-abf0-74d4-b1d0-75f09105cb91"
+    },
+    {
+      "tag": "S1_grok_a1",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "8ebf14d425761c25e04e001c13d47f978cfc0b02e9f0bff68b8886be5e924768",
+      "state": "pending",
+      "t": 1793126026.5518482
+    },
+    {
+      "tag": "S1_grok_a1",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "8ebf14d425761c25e04e001c13d47f978cfc0b02e9f0bff68b8886be5e924768",
+      "state": "submitted",
+      "request_id": "01a17ea3-e68b-70f4-a8b3-58c5fc6a7d41"
+    },
+    {
+      "tag": "S2_qwen_a1",
+      "model": "alibaba/qwen-image-3/edit",
+      "body_sha": "f181b01c2b9d81203ca7000c8f6adedf7ec865ac170a9bf282c823466e5e5f1a",
+      "state": "pending",
+      "t": 1793126041.52545
+    },
+    {
+      "tag": "S2_qwen_a1",
+      "body_sha": "f181b01c2b9d81203ca7000c8f6adedf7ec865ac170a9bf282c823466e5e5f1a",
+      "state": "rejected",
+      "status": 403,
+      "text": "{\"detail\":\"not_enough_credits\"}"
+    },
+    {
+      "tag": "S2_grok_a1",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "8d38bb8c5cc7fe74bc108c933935abcae87a5f00b25213605cc1fc74aa004808",
+      "state": "pending",
+      "t": 1793126058.4667182
+    },
+    {
+      "tag": "S2_grok_a1",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "8d38bb8c5cc7fe74bc108c933935abcae87a5f00b25213605cc1fc74aa004808",
+      "state": "submitted",
+      "request_id": "01a17ea4-6af2-7d03-afbf-c281cfc4edb2"
+    },
+    {
+      "tag": "S3_qwen_a1",
+      "model": "alibaba/qwen-image-3/edit",
+      "body_sha": "f8f07595bc46fc0e97daa4f9811ef693be4304f7a3ba86ec37c3e379f61257a9",
+      "state": "pending",
+      "t": 1793126073.4592497
+    },
+    {
+      "tag": "S3_qwen_a1",
+      "body_sha": "f8f07595bc46fc0e97daa4f9811ef693be4304f7a3ba86ec37c3e379f61257a9",
+      "state": "rejected",
+      "status": 403,
+      "text": "{\"detail\":\"not_enough_credits\"}"
+    },
+    {
+      "tag": "S3_grok_a1",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "aca7613cdd0dc280d7b215bd857e9518613a14d22dc15b6cc0b83087214233b2",
+      "state": "pending",
+      "t": 1793126090.4064198
+    },
+    {
+      "tag": "S3_grok_a1",
+      "model": "xai/grok-imagine-image-2.0",
+      "body_sha": "aca7613cdd0dc280d7b215bd857e9518613a14d22dc15b6cc0b83087214233b2",
+      "state": "submitted",
+      "request_id": "01a17ea4-e7c5-7587-b00d-502508c25b0c"
+    },
+    {
+      "request_id": "01a17ea4-6af2-7d03-afbf-c281cfc4edb2",
+      "state": "failed",
+      "error": "Your credit balance is too low to complete this request. Please top up your balance and try again."
+    },
+    {
+      "request_id": "01a17ea3-abf0-74d4-b1d0-75f09105cb91",
+      "state": "completed"
+    },
+    {
+      "request_id": "01a17ea4-e7c5-7587-b00d-502508c25b0c",
+      "state": "failed",
+      "error": "Your credit balance is too low to complete this request. Please top up your balance and try again."
+    },
+    {
+      "request_id": "01a17ea3-e68b-70f4-a8b3-58c5fc6a7d41",
+      "state": "completed"
+    }
+  ],
+  "deviations": [
+    "D3: alibaba/qwen-image-3/edit rejects prompt_extend:false on Higgsfield ('prompt_extend: True was expected'); sent true."
+  ]
 }
