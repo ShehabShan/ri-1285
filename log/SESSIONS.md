@@ -2,6 +2,13 @@
 
 Newest entry first. See the format in `docs/SESSION_PROTOCOL.md`.
 
+## Session 6 — 2026-10-27 — decisions locked (no production task)
+- Bot: https://prompt.ql.app/project/p-fc80a416-c97c/promptql-playground/thread/a5cd703a-1957-4fa8-80d2-33e683f8fd6a
+- Did: User delegated all open decisions. Wrote docs/DECISIONS.md (D1-D8): Kling 3.0 4K with whole-film Pro fallback, 6-clip shot plan with exact frame map, still bake-off, Kokoro TTS + synthesized/CC0 audio, spending authorization ($60 estimate ceiling), delegated fresh-session review, conform rules, session order. Updated S01/T03/T15 handoffs, queue and AGENTS.
+- Live checks: Kling 3.0 4K 5 s sound off estimate = $2.10 (endpoint works again; the sound-on 4K estimate timed out once). Pro $0.84, Std $0.63, Qwen Image 3 edit $0.075, Grok Image 2.0 $0.09. No audio/TTS model in the 91-model catalog; no TTS or music integration connected.
+- Cost: no paid generation.
+- Next: S01 — implement docs/DECISIONS.md; no paid submits.
+
 ## Session 5 — 2026-10-27 — audio decision record (no production task)
 - Bot: https://prompt.ql.app/project/p-fc80a416-c97c/promptql-playground/thread/a5cd703a-1957-4fa8-80d2-33e683f8fd6a
 - Starting commit: 2f6d7ed.

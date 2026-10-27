@@ -20,12 +20,10 @@ def render(root):
                ", ".join(t["requires"]) or "—", ", ".join(t["outputs"]) or "—", t["status"]]
         lines.append("| " + " | ".join(row) + " |")
     lines += [
-        "", "## Open user decisions",
-        "- Audio: DECIDED 2026-10-27 — Kling sound on per clip for ambience only; monologue, step drums, muffle, silence and bell added at assembly. Voice/score source and rights still open.",
-        "- Sequential creation approved; see docs/SEQUENTIAL_DESIGN.md. Run S01 first.",
-        "- Paid generation: reliable OLU upper bounds required before submission, not USD guesses.",
-        "- Master packages Q03/Q04/Q05 and final Q18 need explicit user approvals for exact hashes.",
-        "- Optional generative finishing needs separate user authorization; default is deterministic.",
+        "", "## User decisions",
+        "- All open decisions were delegated to the bot and are LOCKED in docs/DECISIONS.md (2026-10-27): model, shot plan, stills, audio, spending, review, conform, session order.",
+        "- Paid generation is authorized within 50 OLU/session (10 reserve), 3 attempts per item and a $60 Higgsfield-estimate film ceiling.",
+        "- Run S01 first (no paid generation).",
         "", "## Handoff", "",
     ]
     for t in state["tasks"]:

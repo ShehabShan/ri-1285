@@ -1,5 +1,7 @@
 # ri-1285 — Sequential video creation (proposed redesign)
 
+> **2026-10-27:** all open decisions are locked in [`docs/DECISIONS.md`](DECISIONS.md), which supersedes any conflicting text below.
+
 ## Verified facts (2026-10-23)
 
 | Item | Finding | Status |

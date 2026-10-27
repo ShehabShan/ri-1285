@@ -1,6 +1,6 @@
 # Fresh-session entrypoint
-This is a film-production repository, not an application. Read README and
-docs/SESSION_PROTOCOL.md before acting. The immutable brief is supreme.
+This is a film-production repository, not an application. Read README,
+docs/DECISIONS.md and docs/SESSION_PROTOCOL.md before acting. docs/DECISIONS.md holds the user's delegated, binding decisions; do not stop for needs_user on them. The immutable brief is supreme.
 The user's explicit current request takes priority over the default queue.
 For production: one task, <=50 OLU including review/commit overhead, then commit,
 push, verify remote, and stop. Never auto-start the next task.
